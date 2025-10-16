@@ -3,9 +3,12 @@
 <head>
 <script>
 window.attachments = {
-  'file-0': `data:@file/csv;base64,TnVtZXJpYyxOdW1lcmljLTIsTnVtZXJpYy1TdWZmaXgKMSwwMSwxc3QKMiwwMiwybmQKMywwMywzcmQKNCwwNCw0dGgKNSwwNSw1dGgKNiwwNiw2dGgKNywwNyw3dGgKOCwwOCw4dGgKOSwwOSw5dGgKMTAsMTAsMTB0aAoxMSwxMSwxMXRoCjEyLDEyLDEydGgKMTMsMTMsMTN0aAoxNCwxNCwxNHRoCjE1LDE1LDE1dGgKMTYsMTYsMTZ0aAoxNywxNywxN3RoCjE4LDE4LDE4dGgKMTksMTksMTl0aAoyMCwyMCwyMHRoCjIxLDIxLDIxc3QKMjIsMjIsMjJuZAoyMywyMywyM3JkCjI0LDI0LDI0dGgKMjUsMjUsMjV0aAoyNiwyNiwyNnRoCjI3LDI3LDI3dGgKMjgsMjgsMjh0aAoyOSwyOSwyOXRoCjMwLDMwLDMwdGgKMzEsMzEsMzFzdA==`,
+  'file-0': `data:@file/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAEZ0lEQVR4nLzW+VPUdRgH8F1ZW8O4xQstrnCSDEjQQA6RxkVTwTwq5RptRJohkkGO0MDSBliQQKTEOOWI4pArDgVRFiEaEHIjRhAxQgnjZpU10N7v/ge//PD6fGfnM8vzfL7P83xW8tbkLyKRaEPmKPQUD8ExuQxOJi6C0XHBsL6/E2ZOnedOxRhsf6wBY6suwYL5GThbaAX11Juh+tgSqO1QCheIXvCfWCb9HcvD8FvQdvtdqJzIgP2iT2Br1hEYp3sWytYVQkXXIThoy+jC3Ipgiv8ZZtnIDJozxfBZ7HbYcOeJEBlIjjX+i2Xlwiz+T7+foFNdE4wJOwzL5kqg8fhJKF3kC31THZhrFN+TW+wm7l++G+qo+XVakXxPFuuPwrThbEEy8DrOKuoZsIRJqf0w/4EuvJsyB2fPbIDeB07Bp0EdsGXjPFSHr4WlM6wl39r9sG+Yz6E5PP3Xy3OgQdOngmTQomOKJaLDDLYeToW/TbzGT2qYh5fuF9DsZSn08OyGNl2DUO9cELxsx88ds9KhlstFKB2zgyFGN+HjeC8hMhA/s/DBYu/kDA8yCNFcxUOoTtjI//9uEqzK5snqRLIDrnhOQ+1A7i++PslsQvbC7kj2UJnVUrhiySxMt18uRAYS1QVG5G3KKupQ/giT17ZBrWRH2GnN6TRTHAYN/mad/GpjweedfE9L66Ng5VdGUP9kFVTunuJJdHJ2XdW8LEgGadfbsZwaYsfKR69CmTatyFsIj6SsgAF9PbBsQAGliezqfX+y9grPc9pkb/n/3Ks5teRz/jD4thI6Zy0TIgOxzq2tWEyNWDnK53fgrvgbcORgOePNfQAjjF3hfT/uGV0WAEtZOKKGV5lHSfN3cHWWNXT1i4FJZz+GfSZdgmSQHziCxSiIXfrl6DvwkP4qGNjATo77i1VUoIiG9UXs6kcfcpruWcUJ5pjwD/SZ4K1nsqca7s0Nh6Guxvw2q2+EyECiivHEcl97nPHKOc39LrJvh30Yu9TaDfZ9zZmquMH87h3nPZySxP53absH3+vlzWE/wOeQkUwou2kAy4ZyBMngM0u+95hx1tK4IyvH4wfWkmfZU6javw+2T5+AbeWM7hU5e0KveiWMMP8ZbnXhNxTXcY6arYvgSRTu5LPmOSEyENsUcZo7j7OW31+TBj/4SB927gqFliYtMLvGEAYoCmDPNt4BeYWcPM8XsKv9Db2hRiOfDUZ4G1+bSoCGygAhMpDs6I3EEtfUChO7eeLbdphD6zUquMn1c+ihfgSPSln1DUFbmJMsFtaVc3Y6ufRy/+CbMKrmAsyw5W+kYesDQmQgfvJ9HpY083zG5c5fDIoiRqfZWgyDKhbDl07zk4pgzvfO27yTNd6QQ/fASmjay516FadhegbPvTb3D1gpcxciA0ltDTsw3jmakWqzY684fAvfLmE/qwp4lyUksJ8X2zH25tJkOD+/Glr2M16La3wHJ6Y5Tddf4i+JvHRNuLncTogM/gsAAP//bMOGUQrte/AAAAAASUVORK5CYII=`,
+  'image.png': `data:@file/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAEZ0lEQVR4nL...`,
 };
 </script>
+
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,6 +92,17 @@ window.attachments = {
             let headerRow = document.createElement('tr');
             header.forEach(headerText => {
                 let th = document.createElement('th');
+
+                // Add image to the first header
+                if (headerText === header[0] && window.attachments && window.attachments['image.png']) {
+                    let img = document.createElement('img');
+                    img.src = window.attachments['image.png'];
+                    img.style.width = '20px';
+                    img.style.height = '20px';
+                    img.style.marginRight = '5px';
+                    th.appendChild(img);
+                }
+
                 th.textContent = headerText;
                 headerRow.appendChild(th);
             });
