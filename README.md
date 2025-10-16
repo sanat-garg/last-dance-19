@@ -11,11 +11,12 @@ This web application takes a CSV file and displays its contents as an HTML table
 -   Uses only vanilla JavaScript, HTML, and CSS, requiring no external libraries or frameworks.
 -   Includes simple error handling to display an appropriate message if the CSV data is not found.
 -   Modern and visually appealing design.
+-   Adds an image to the first header cell in the table.
 
 ## How to Use
 
 1.  **Deployment:**  Deploy the `index.html` file to a web server or use GitHub Pages to host the application.
-2.  **Access:** Open the `index.html` file in a web browser. The CSV data (if available as `window.attachments['file-0']`) will be automatically displayed as a table.
+2.  **Access:** Open the `index.html` file in a web browser. The CSV data (if available as `window.attachments['file-0']`) will be automatically displayed as a table. The `image.png` (if available as `window.attachments['image.png']`) will be displayed in the first header column.
 
 ## Technologies Used
 
